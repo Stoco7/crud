@@ -8,6 +8,4 @@ $nome_banco = "db_barbearia";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $nome_banco, $porta);
 
-echo "<h1>Arquivo de conexão </h1>";
-
 ?>

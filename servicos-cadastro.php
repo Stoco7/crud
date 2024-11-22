@@ -2,13 +2,14 @@
 
 <main>
     <h2>Adicionar novo serviço</h2>
-    <form>
-        <label>Serviço: <input></label> <br>
-        <label>Descrição: <input></label> <br>
-        <label>Preço: <input></label> <br>
-        <label>Categoria: <input></label> <br>
+    <form method="post" action="servicos-salvar.php">
+        <label>Serviço: <input name="servico"></label> <br>
+        <label>Descrição: <input name="descricao"></label> <br>
+        <label>Preço: <input name="preco"></label> <br>
+        <label>Categoria: <input name="categoria"></label> <br>
 
-        <button>Salvar</button>
+        <button type="submit">Salvar</button>
     </form>
 </main>
+
 <?php include "footer.php"; ?>
