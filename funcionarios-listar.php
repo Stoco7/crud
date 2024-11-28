@@ -5,37 +5,37 @@ include "conexao.php";
 ?>
 <main>
 
-<h2>Todos os Produtos</h2>
-<a href="produtos-cadastro.php">Adicionar novo Produto</a>
+<h2>Todos os funcionarios</h2>
+<a href="funcionarios-cadastro.php">Adicionar novo Funcionario</a>
 
 <table border ="2">
     <tr>
-        <th>Produto</th>
-        <th>Marca</th>
-        <th>Função</th>
-        <th>Indicação</th>
+        <th>nome</th>
+        <th>idade</th>
+        <th>Telefone</th>
+        <th>rf</th>
         <th>Ações</th>
 
     </tr>
 
 <?php
 
-$sql = "select * from produtos";
+$sql = "select * from funcionarios";
 $resultado = mysqli_query($conexao, $sql);
 
 while($linha = mysqli_fetch_assoc($resultado)){
     echo "<tr>";
-    echo "<td> {$linha['produto']}</td>";
-    echo "<td> {$linha['marca']} </td>";
-    echo "<td> {$linha['funcao']} </td>";
-    echo "<td> {$linha['indicacao']} </td>";
+    echo "<td> {$linha['nome']}</td>";
+    echo "<td> {$linha['idade']} </td>";
+    echo "<td> {$linha['telefone']} </td>";
+    echo "<td> {$linha['rf']} </td>";
 
     echo "<td>";
-    echo "<a href='produtos-excluir.php?id={$linha['id']}'>";
+    echo "<a href='funcionarios-excluir.php?id={$linha['id']}'>";
     echo "<img src='lixo.png' width='15'>";
     echo "</a>";
 
-    echo "<a href='produtos-editar.php?id={$linha['id']}'>";
+    echo "<a href='funcionarios-editar.php?id={$linha['id']}'>";
     echo "<img src='edit.png' width='15'>";
     echo "</a>";
     echo "</td>";

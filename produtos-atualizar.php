@@ -6,7 +6,7 @@ $marca = $_POST['marca'];
 $funcao = $_POST['funcao'];
 $indicacao = $_POST['indicacao'];
 
-$sql = "update agenda set produto = '$produto', marca = '$marca', funcao = '$funcao', indicacao = '$categoria' where id = $id";
+$sql = "update produtos set produto = '$produto', marca = '$marca', funcao = '$funcao', indicacao = '$categoria' where id = $id";
 
 include "conexao.php";
 
